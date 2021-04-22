@@ -1,0 +1,126 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.menu {
+    width: 1200px;
+    margin: 10px auto;
+    padding: 10px 0px;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.menu::after, .menu::before {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.element {
+    width: 390px;
+    float: left;
+    margin: 0px 5px;
+    position: relative;
+    border: 1px solid #c7c7c7;
+}
+
+.element::after {
+    content: '+';
+    display: block;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #444444;
+    border-radius: 100%;
+    position: relative;
+    left: 50%;
+    margin-left: -15px;
+    bottom: -15px;
+    transition-duration: 1s;
+}
+
+.element img {
+    width: 100%;
+    filter: grayscale(100%);
+    transition-duration: 1s;
+}
+
+.img a {
+    display: block;
+}
+
+.text {
+    color: #444444;
+    overflow: hidden;
+}
+
+.head {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 20px;
+    line-height: 25px;
+    text-transform: uppercase;
+}
+
+.par {
+    height: 0px;
+    margin: 0px 30px;
+    transition-property: height, margin;
+    transition-duration: 1s;
+    transition-delay: .5s;
+}
+
+.date {
+    width: 100px;
+    height: 70px;
+    margin: 5px;
+    position: absolute;
+    background-color: #000000;
+    font-weight: bold;
+    color: #ffffff;
+    position: absolute;
+    z-index: 1;
+    transition-duration: 1s;
+}
+
+.date_num {
+    height: 40px;
+    line-height: 40px;
+    font-size: 30px;
+}
+
+.date_mon {
+    height: 30px;
+    line-height: 30px;
+    font-size: 20px;
+    background-color: #ff4444;
+}
+
+.element:hover img {
+    filter: grayscale(0%);
+}
+
+.element:hover .date {
+    opacity: 0%;
+}
+
+.element:hover::after {
+    bottom: 10px;
+    opacity: 0%;
+}
+
+.element:hover .par {
+    height: 80px;
+    margin-top: 20px;
+}
+
+.head:hover {
+    color: #ff4444;
+}
